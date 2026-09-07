@@ -18,8 +18,8 @@ sve_villagers = 13
 sve_villagers_with_lance = 14
 vanilla_pelican_town_fish = 63
 vanilla_ginger_island_fish = 3
-sve_pelican_town_fish = 16
-sve_ginger_island_fish = 10
+sve_pelican_town_fish = 23
+sve_ginger_island_fish = 19
 
 
 class TestVanilla(SVContentPackTestBase):

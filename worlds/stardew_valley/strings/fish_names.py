@@ -121,7 +121,6 @@ class SVEFish:
     clownfish = "Clownfish"
     daggerfish = "Daggerfish"
     diamond_carp = "Diamond Carp"
-    dulse_seaweed = "Dulse Seaweed"
     fiber_goby = "Fiber Goby"
     frog = "Frog"
     gar = "Gar"

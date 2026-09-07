@@ -47,15 +47,24 @@ class SVEContentPack(ContentPack):
             content.fishes.pop(fish_data.lunaloo.name)
             content.fishes.pop(fish_data.seahorse.name)
             content.fishes.pop(fish_data.shiny_lunaloo.name)
-            content.fishes.pop(fish_data.starfish.name)
             content.fishes.pop(fish_data.sea_sponge.name)
+            content.fishes.pop(fish_data.barred_knifejaw.name)
+            content.fishes.pop(fish_data.blue_tang.name)
+            content.fishes.pop(fish_data.ocean_sunfish.name)
+            content.fishes.pop(fish_data.shark.name)
 
             # Remove Highlands fishes at it requires 2 Lance hearts for the quest to access it
             content.fishes.pop(fish_data.daggerfish.name)
             content.fishes.pop(fish_data.gemfish.name)
+            content.fishes.pop(fish_data.highlands_bass.name)
+            content.fishes.pop(fish_data.diamond_carp.name)
+            content.fishes.pop(fish_data.fiber_goby.name)
 
             # Remove Fable Reef fishes at it requires 8 Lance hearts for the event to access it
             content.fishes.pop(fish_data.torpedo_trout.name)
+            content.fishes.pop(fish_data.arrowhead_shark.name)
+            content.fishes.pop(fish_data.turretfish.name)
+            content.fishes.pop(fish_data.viper_eel.name)
 
     def villager_hook(self, content: StardewContent):
         if ginger_island_content_pack.name not in content.registered_packs:
@@ -85,164 +94,361 @@ class SVEContentPack(ContentPack):
             content.registered_packs.add(SVE_GINGER_ISLAND_PACK)
 
 
-register_mod_content_pack(SVEContentPack(
-    ModNames.sve,
-    weak_dependencies=(
-        ginger_island_content_pack.name,
-        ModNames.jasper,  # To override Marlon and Gunther
-    ),
-    shop_sources={
-        SVEGift.aged_blue_moon_wine: (ShopSource(price=28000, shop_region=SVERegion.blue_moon_vineyard),),
-        SVEGift.blue_moon_wine: (ShopSource(price=3000, shop_region=SVERegion.blue_moon_vineyard),),
-        ModEdible.lightning_elixir: (ShopSource(price=12000, shop_region=SVERegion.galmoran_outpost),),
-        ModEdible.barbarian_elixir: (ShopSource(price=22000, shop_region=SVERegion.galmoran_outpost),),
-        ModEdible.gravity_elixir: (ShopSource(price=4000, shop_region=SVERegion.galmoran_outpost),),
-        SVEMeal.grampleton_orange_chicken: (ShopSource(price=650,
-                                                       shop_region=Region.saloon_shop,
-                                                       other_requirements=(SpecificFriendRequirement(ModNPC.sophia, 6),)),),
-        ModEdible.hero_elixir: (ShopSource(price=8000, shop_region=SVERegion.isaac_shop),),
-        ModEdible.aegis_elixir: (ShopSource(price=28000, shop_region=SVERegion.galmoran_outpost),),
-        SVEBeverage.sports_drink: (ShopSource(price=750, shop_region=Region.hospital_shop),),
-        SVEMeal.stamina_capsule: (ShopSource(price=4000, shop_region=Region.hospital_shop),),
-    },
-    harvest_sources={
-        Mushroom.red: (
-            ForagingSource(regions=(SVERegion.forest_west,), seasons=(Season.summer, Season.fall)), ForagingSource(regions=(SVERegion.sprite_spring_cave,), )
+register_mod_content_pack(
+    SVEContentPack(
+        ModNames.sve,
+        weak_dependencies=(
+            ginger_island_content_pack.name,
+            ModNames.jasper,  # To override Marlon and Gunther
         ),
-        Mushroom.purple: (
-            ForagingSource(regions=(SVERegion.forest_west,), seasons=(Season.fall,)),
-            ForagingSource(regions=(SVERegion.sprite_spring_cave, SVERegion.junimo_woods), )
+        shop_sources={
+            SVEGift.aged_blue_moon_wine: (ShopSource(price=28000, shop_region=SVERegion.blue_moon_vineyard),),
+            SVEGift.blue_moon_wine: (ShopSource(price=3000, shop_region=SVERegion.blue_moon_vineyard),),
+            ModEdible.lightning_elixir: (ShopSource(price=12000, shop_region=SVERegion.galmoran_outpost),),
+            ModEdible.barbarian_elixir: (ShopSource(price=22000, shop_region=SVERegion.galmoran_outpost),),
+            ModEdible.gravity_elixir: (ShopSource(price=4000, shop_region=SVERegion.galmoran_outpost),),
+            SVEMeal.grampleton_orange_chicken: (
+                ShopSource(price=650, shop_region=Region.saloon_shop, other_requirements=(SpecificFriendRequirement(ModNPC.sophia, 6),)),
+            ),
+            ModEdible.hero_elixir: (ShopSource(price=8000, shop_region=SVERegion.isaac_shop),),
+            ModEdible.aegis_elixir: (ShopSource(price=28000, shop_region=SVERegion.galmoran_outpost),),
+            SVEBeverage.sports_drink: (ShopSource(price=750, shop_region=Region.hospital_shop),),
+            SVEMeal.stamina_capsule: (ShopSource(price=4000, shop_region=Region.hospital_shop),),
+        },
+        harvest_sources={
+            Mushroom.red: (
+                ForagingSource(regions=(SVERegion.forest_west,), seasons=(Season.summer, Season.fall)),
+                ForagingSource(
+                    regions=(SVERegion.sprite_spring_cave,),
+                ),
+            ),
+            Mushroom.purple: (
+                ForagingSource(regions=(SVERegion.forest_west,), seasons=(Season.fall,)),
+                ForagingSource(
+                    regions=(SVERegion.sprite_spring_cave, SVERegion.junimo_woods),
+                ),
+            ),
+            Mushroom.morel: (
+                ForagingSource(regions=(SVERegion.forest_west,), seasons=(Season.fall,)),
+                ForagingSource(
+                    regions=(SVERegion.sprite_spring_cave,),
+                ),
+            ),
+            Mushroom.chanterelle: (
+                ForagingSource(regions=(SVERegion.forest_west,), seasons=(Season.fall,)),
+                ForagingSource(
+                    regions=(SVERegion.sprite_spring_cave,),
+                ),
+            ),
+            Flower.tulip: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.spring,)),),
+            Flower.blue_jazz: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.spring,)),),
+            Flower.summer_spangle: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.summer,)),),
+            Flower.sunflower: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.summer,)),),
+            Flower.fairy_rose: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.fall,)),),
+            Fruit.ancient_fruit: (
+                ForagingSource(regions=(SVERegion.sprite_spring,), seasons=Season.not_winter, other_requirements=(YearRequirement(3),)),
+                ForagingSource(regions=(SVERegion.sprite_spring_cave,)),
+            ),
+            Fruit.sweet_gem_berry: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=Season.not_winter, other_requirements=(YearRequirement(3),)),),
+            # New items
+            ModLoot.green_mushroom: (ForagingSource(regions=(SVERegion.highlands_pond,), seasons=Season.not_winter),),
+            ModLoot.ornate_treasure_chest: (
+                ForagingSource(
+                    regions=(SVERegion.highlands_outside,),
+                    other_requirements=(CombatRequirement(Performance.galaxy), ToolRequirement(Tool.axe, ToolMaterial.iron)),
+                ),
+            ),
+            ModLoot.swirl_stone: (ForagingSource(regions=(SVERegion.crimson_badlands,), other_requirements=(CombatRequirement(Performance.galaxy),)),),
+            ModLoot.void_soul: (ForagingSource(regions=(SVERegion.crimson_badlands,), other_requirements=(CombatRequirement(Performance.good),)),),
+            SVEForage.winter_star_rose: (ForagingSource(regions=(SVERegion.summit,), seasons=(Season.winter,)),),
+            SVEForage.bearberry: (ForagingSource(regions=(Region.secret_woods,), seasons=(Season.winter,)),),
+            SVEForage.poison_mushroom: (ForagingSource(regions=(Region.secret_woods,), seasons=(Season.summer, Season.fall)),),
+            SVEForage.red_baneberry: (ForagingSource(regions=(Region.secret_woods,), seasons=(Season.summer, Season.summer)),),
+            SVEForage.ferngill_primrose: (ForagingSource(regions=(SVERegion.summit,), seasons=(Season.spring,)),),
+            SVEForage.goldenrod: (ForagingSource(regions=(SVERegion.summit,), seasons=(Season.summer, Season.fall)),),
+            SVEForage.conch: (
+                ForagingSource(
+                    regions=(
+                        Region.beach,
+                        SVERegion.fable_reef,
+                    )
+                ),
+            ),
+            SVEForage.dewdrop_berry: (ForagingSource(regions=(SVERegion.enchanted_grove,)),),
+            SVEForage.sand_dollar: (
+                ForagingSource(
+                    regions=(
+                        Region.beach,
+                        SVERegion.fable_reef,
+                    ),
+                    seasons=(Season.spring, Season.summer),
+                ),
+            ),
+            SVEForage.golden_ocean_flower: (ForagingSource(regions=(SVERegion.fable_reef,)),),
+            SVEForage.four_leaf_clover: (
+                ForagingSource(
+                    regions=(
+                        Region.secret_woods,
+                        SVERegion.forest_west,
+                    ),
+                    seasons=(Season.summer, Season.fall),
+                ),
+            ),
+            SVEForage.mushroom_colony: (
+                ForagingSource(
+                    regions=(
+                        Region.secret_woods,
+                        SVERegion.junimo_woods,
+                        SVERegion.forest_west,
+                    ),
+                    seasons=(Season.fall,),
+                ),
+            ),
+            SVEForage.rusty_blade: (ForagingSource(regions=(SVERegion.crimson_badlands,), other_requirements=(CombatRequirement(Performance.great),)),),
+            SVEForage.rafflesia: (ForagingSource(regions=(Region.secret_woods,), seasons=Season.not_winter),),
+            SVEForage.thistle: (ForagingSource(regions=(SVERegion.summit,)),),
+            ModLoot.void_pebble: (ForagingSource(regions=(SVERegion.crimson_badlands,), other_requirements=(CombatRequirement(Performance.great),)),),
+            ModLoot.void_shard: (
+                ForagingSource(
+                    regions=(SVERegion.crimson_badlands,),
+                    other_requirements=(
+                        CombatRequirement(Performance.galaxy),
+                        SkillRequirement(Skill.combat, 10),
+                        YearRequirement(3),
+                    ),
+                ),
+            ),
+            SVEWaterItem.dulse_seaweed: (ForagingSource(regions=(Region.beach,), other_requirements=(FishingRequirement(Region.beach),)),),
+            # Fable Reef
+            WaterItem.coral: (ForagingSource(regions=(SVERegion.fable_reef,)),),
+            Forageable.rainbow_shell: (ForagingSource(regions=(SVERegion.fable_reef,)),),
+            WaterItem.sea_urchin: (ForagingSource(regions=(SVERegion.fable_reef,)),),
+            # Crops
+            SVESeed.shrub: (ForagingSource(regions=(Region.secret_woods,), other_requirements=(CombatRequirement(Performance.good),)),),
+            SVEFruit.salal_berry: (
+                Tag(ItemTag.FRUIT),
+                HarvestCropSource(seed=SVESeed.shrub, seasons=(Season.spring,)),
+            ),
+            SVESeed.slime: (ForagingSource(regions=(SVERegion.highlands_outside,), other_requirements=(CombatRequirement(Performance.good),)),),
+            SVEFruit.slime_berry: (
+                Tag(ItemTag.FRUIT),
+                HarvestCropSource(seed=SVESeed.slime, seasons=(Season.spring,)),
+            ),
+            SVESeed.ancient_fern: (ForagingSource(regions=(Region.secret_woods,)),),
+            SVEVegetable.ancient_fiber: (
+                Tag(ItemTag.VEGETABLE),
+                HarvestCropSource(seed=SVESeed.ancient_fern, seasons=(Season.summer,)),
+            ),
+            SVESeed.stalk: (ForagingSource(regions=(SVERegion.highlands_outside,), other_requirements=(CombatRequirement(Performance.good),)),),
+            SVEFruit.monster_fruit: (
+                Tag(ItemTag.FRUIT),
+                HarvestCropSource(seed=SVESeed.stalk, seasons=(Season.summer,)),
+            ),
+            SVESeed.fungus: (ForagingSource(regions=(SVERegion.highlands_pond,), other_requirements=(CombatRequirement(Performance.good),)),),
+            SVEVegetable.monster_mushroom: (
+                Tag(ItemTag.VEGETABLE),
+                HarvestCropSource(seed=SVESeed.fungus, seasons=(Season.fall,)),
+            ),
+            SVESeed.void: (ForagingSource(regions=(SVERegion.highlands_cavern,), other_requirements=(CombatRequirement(Performance.good),)),),
+            SVEVegetable.void_root: (
+                Tag(ItemTag.VEGETABLE),
+                HarvestCropSource(seed=SVESeed.void, seasons=(Season.winter,)),
+            ),
+        },
+        fishes=(
+            fish_data.alligator,
+            fish_data.arrowhead_shark,  # Removed when no ginger island
+            fish_data.baby_lunaloo,  # Removed when no ginger island
+            fish_data.barred_knifejaw,  # Removed when no ginger island
+            fish_data.blue_tang,  # Removed when no ginger island
+            fish_data.bonefish,
+            fish_data.bull_trout,
+            fish_data.butterfish,
+            fish_data.clownfish,  # Removed when no ginger island
+            fish_data.daggerfish,
+            fish_data.diamond_carp,  # Removed when no ginger island
+            fish_data.fiber_goby,  # Removed when no ginger island
+            fish_data.frog,
+            fish_data.gar,
+            fish_data.gemfish,
+            fish_data.goldenfish,
+            fish_data.goldfish,
+            fish_data.grass_carp,
+            fish_data.highlands_bass,  # Removed when no ginger island
+            fish_data.king_salmon,
+            fish_data.kittyfish,
+            fish_data.lunaloo,  # Removed when no ginger island
+            fish_data.meteor_carp,
+            fish_data.minnow,
+            fish_data.ocean_sunfish,  # Removed when no ginger island
+            fish_data.puppyfish,
+            fish_data.radioactive_bass,
+            fish_data.sea_sponge,  # Removed when no ginger island
+            fish_data.seahorse,  # Removed when no ginger island
+            fish_data.shark,  # Removed when no ginger island
+            fish_data.shiny_lunaloo,  # Removed when no ginger island
+            fish_data.snatcher_worm,
+            fish_data.starfish,
+            fish_data.swamp_crab,
+            fish_data.tadpole,
+            fish_data.torpedo_trout,
+            fish_data.turretfish,  # Removed when no ginger island
+            fish_data.undeadfish,
+            fish_data.viper_eel,  # Removed when no ginger island
+            fish_data.void_eel,
+            fish_data.water_grub,
+            fish_data.wolf_snapper,
         ),
-        Mushroom.morel: (
-            ForagingSource(regions=(SVERegion.forest_west,), seasons=(Season.fall,)), ForagingSource(regions=(SVERegion.sprite_spring_cave,), )
+        villagers=(
+            villagers_data.claire,
+            villagers_data.lance,  # Removed when no ginger island
+            villagers_data.mommy,
+            villagers_data.sophia,
+            villagers_data.victor,
+            villagers_data.andy,
+            villagers_data.apples,
+            villagers_data.gunther,
+            villagers_data.martin,
+            villagers_data.marlon,
+            villagers_data.morgan,
+            villagers_data.scarlett,
+            villagers_data.susan,
+            villagers_data.morris,
+            override(villagers_data.wizard, bachelor=True, mod_name=ModNames.sve),
         ),
-        Mushroom.chanterelle: (
-            ForagingSource(regions=(SVERegion.forest_west,), seasons=(Season.fall,)), ForagingSource(regions=(SVERegion.sprite_spring_cave,), )
+        cooking_recipes=(
+            CookingRecipe(
+                name=SVEMeal.baked_berry_oatmeal,
+                ingredients=(
+                    (Forageable.salmonberry, 15),
+                    (Forageable.blackberry, 15),
+                    (Ingredient.sugar, 1),
+                    (Ingredient.wheat_flour, 2),
+                ),
+                sources=(ShopSource(shop_region=SVERegion.bear_shop, price=0),),
+            ),
+            CookingRecipe(
+                name=SVEMeal.big_bark_burger,
+                ingredients=(
+                    (SVEFish.puppyfish, 1),
+                    (Meal.bread, 1),
+                    (Ingredient.oil, 1),
+                ),
+                sources=(ShopSource(shop_region=Region.saloon_shop, price=5500, other_requirements=(SpecificFriendRequirement(npc=NPC.gus, hearts=5),)),),
+            ),
+            CookingRecipe(
+                name=SVEMeal.flower_cookie,
+                ingredients=(
+                    (SVEForage.ferngill_primrose, 1),
+                    (SVEForage.goldenrod, 1),
+                    (SVEForage.winter_star_rose, 1),
+                    (Ingredient.wheat_flour, 1),
+                    (Ingredient.sugar, 1),
+                    (AnimalProduct.large_egg, 1),
+                ),
+                sources=(ShopSource(shop_region=SVERegion.bear_shop, price=0),),
+            ),
+            CookingRecipe(
+                name=SVEMeal.frog_legs,
+                ingredients=(
+                    (SVEFish.frog, 1),
+                    (Ingredient.oil, 1),
+                    (Ingredient.wheat_flour, 1),
+                ),
+                sources=(ShopSource(shop_region=Region.adventurer_guild, price=2000),),
+            ),
+            CookingRecipe(
+                name=SVEMeal.glazed_butterfish,
+                ingredients=(
+                    (SVEFish.butterfish, 1),
+                    (Ingredient.wheat_flour, 1),
+                    (Ingredient.oil, 1),
+                ),
+                sources=(ShopSource(shop_region=Region.saloon_shop, price=4000, other_requirements=(SpecificFriendRequirement(npc=NPC.gus, hearts=10),)),),
+            ),
+            CookingRecipe(
+                name=SVEMeal.mixed_berry_pie,
+                ingredients=(
+                    (Fruit.strawberry, 6),
+                    (SVEFruit.salal_berry, 6),
+                    (Forageable.blackberry, 6),
+                    (SVEForage.bearberry, 6),
+                    (Ingredient.sugar, 1),
+                    (Ingredient.wheat_flour, 1),
+                ),
+                sources=(ShopSource(shop_region=Region.saloon_shop, price=3500),),
+            ),
+            CookingRecipe(
+                name=SVEMeal.mushroom_berry_rice,
+                ingredients=(
+                    (SVEForage.poison_mushroom, 3),
+                    (SVEForage.red_baneberry, 10),
+                    (Ingredient.rice, 1),
+                    (Ingredient.sugar, 2),
+                ),
+                sources=(
+                    ShopSource(shop_region=Region.adventurer_guild, price=1500, other_requirements=(SpecificFriendRequirement(npc=ModNPC.marlon, hearts=6),)),
+                ),
+            ),
+            CookingRecipe(
+                name=SVEMeal.seaweed_salad,
+                ingredients=(
+                    (SVEWaterItem.dulse_seaweed, 2),
+                    (WaterItem.seaweed, 2),
+                    (Ingredient.oil, 1),
+                ),
+                sources=(ShopSource(shop_region=Region.fish_shop, price=1250),),
+            ),
+            CookingRecipe(
+                name=SVEMeal.void_delight,
+                ingredients=(
+                    (SVEFish.void_eel, 1),
+                    (Loot.void_essence, 50),
+                    (Loot.solar_essence, 20),
+                ),
+                sources=(ShopSource(shop_region=Region.sewer_shop, price=5000, other_requirements=(SpecificFriendRequirement(npc=NPC.krobus, hearts=10),)),),
+            ),
+            CookingRecipe(
+                name=SVEMeal.void_salmon_sushi,
+                ingredients=(
+                    (Fish.void_salmon, 1),
+                    (ArtisanGood.void_mayonnaise, 1),
+                    (WaterItem.seaweed, 3),
+                ),
+                sources=(ShopSource(shop_region=Region.sewer_shop, price=5000, other_requirements=(SpecificFriendRequirement(npc=NPC.krobus, hearts=10),)),),
+            ),
         ),
-        Flower.tulip: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.spring,)),),
-        Flower.blue_jazz: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.spring,)),),
-        Flower.summer_spangle: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.summer,)),),
-        Flower.sunflower: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.summer,)),),
-        Flower.fairy_rose: (ForagingSource(regions=(SVERegion.sprite_spring,), seasons=(Season.fall,)),),
-        Fruit.ancient_fruit: (
-            ForagingSource(regions=(SVERegion.sprite_spring,), seasons=Season.not_winter, other_requirements=(YearRequirement(3),)),
-            ForagingSource(regions=(SVERegion.sprite_spring_cave,)),
+        crafting_recipes=(
+            CraftingRecipe(
+                name=ModEdible.haste_elixir,
+                ingredients=(
+                    (Loot.void_essence, 35),
+                    (ModLoot.void_soul, 5),
+                    (Ingredient.sugar, 1),
+                    (Meal.spicy_eel, 1),
+                ),
+                sources=(ShopSource(shop_region=SVERegion.alesia_shop, price=35000),),
+            ),
+            CraftingRecipe(
+                name=ModEdible.hero_elixir,
+                ingredients=(
+                    (ModLoot.void_pebble, 3),
+                    (ModLoot.void_soul, 5),
+                    (Ingredient.oil, 1),
+                    (Loot.slime, 10),
+                ),
+                sources=(ShopSource(shop_region=SVERegion.isaac_shop, price=65000),),
+            ),
+            CraftingRecipe(
+                name=ModEdible.armor_elixir,
+                ingredients=(
+                    (Loot.solar_essence, 30),
+                    (ModLoot.void_soul, 5),
+                    (Ingredient.vinegar, 5),
+                    (Fossil.bone_fragment, 5),
+                ),
+                sources=(ShopSource(shop_region=SVERegion.alesia_shop, price=50000),),
+            ),
         ),
-        Fruit.sweet_gem_berry: (
-            ForagingSource(regions=(SVERegion.sprite_spring,), seasons=Season.not_winter, other_requirements=(YearRequirement(3),)),
-        ),
-
-        # New items
-
-        ModLoot.green_mushroom: (ForagingSource(regions=(SVERegion.highlands_pond,), seasons=Season.not_winter),),
-        ModLoot.ornate_treasure_chest: (ForagingSource(regions=(SVERegion.highlands_outside,),
-                                                       other_requirements=(CombatRequirement(Performance.galaxy),
-                                                                           ToolRequirement(Tool.axe, ToolMaterial.iron))),),
-        ModLoot.swirl_stone: (ForagingSource(regions=(SVERegion.crimson_badlands,), other_requirements=(CombatRequirement(Performance.galaxy),)),),
-        ModLoot.void_soul: (ForagingSource(regions=(SVERegion.crimson_badlands,), other_requirements=(CombatRequirement(Performance.good),)),),
-        SVEForage.winter_star_rose: (ForagingSource(regions=(SVERegion.summit,), seasons=(Season.winter,)),),
-        SVEForage.bearberry: (ForagingSource(regions=(Region.secret_woods,), seasons=(Season.winter,)),),
-        SVEForage.poison_mushroom: (ForagingSource(regions=(Region.secret_woods,), seasons=(Season.summer, Season.fall)),),
-        SVEForage.red_baneberry: (ForagingSource(regions=(Region.secret_woods,), seasons=(Season.summer, Season.summer)),),
-        SVEForage.ferngill_primrose: (ForagingSource(regions=(SVERegion.summit,), seasons=(Season.spring,)),),
-        SVEForage.goldenrod: (ForagingSource(regions=(SVERegion.summit,), seasons=(Season.summer, Season.fall)),),
-        SVEForage.conch: (ForagingSource(regions=(Region.beach, SVERegion.fable_reef,)),),
-        SVEForage.dewdrop_berry: (ForagingSource(regions=(SVERegion.enchanted_grove,)),),
-        SVEForage.sand_dollar: (ForagingSource(regions=(Region.beach, SVERegion.fable_reef,), seasons=(Season.spring, Season.summer)),),
-        SVEForage.golden_ocean_flower: (ForagingSource(regions=(SVERegion.fable_reef,)),),
-        SVEForage.four_leaf_clover: (ForagingSource(regions=(Region.secret_woods, SVERegion.forest_west,), seasons=(Season.summer, Season.fall)),),
-        SVEForage.mushroom_colony: (ForagingSource(regions=(Region.secret_woods, SVERegion.junimo_woods, SVERegion.forest_west,), seasons=(Season.fall,)),),
-        SVEForage.rusty_blade: (ForagingSource(regions=(SVERegion.crimson_badlands,), other_requirements=(CombatRequirement(Performance.great),)),),
-        SVEForage.rafflesia: (ForagingSource(regions=(Region.secret_woods,), seasons=Season.not_winter),),
-        SVEForage.thistle: (ForagingSource(regions=(SVERegion.summit,)),),
-        ModLoot.void_pebble: (ForagingSource(regions=(SVERegion.crimson_badlands,), other_requirements=(CombatRequirement(Performance.great),)),),
-        ModLoot.void_shard: (ForagingSource(regions=(SVERegion.crimson_badlands,),
-                                            other_requirements=(CombatRequirement(Performance.galaxy),
-                                                                SkillRequirement(Skill.combat, 10),
-                                                                YearRequirement(3),)),),
-        SVEWaterItem.dulse_seaweed: (ForagingSource(regions=(Region.beach,), other_requirements=(FishingRequirement(Region.beach),)),),
-
-        # Fable Reef
-        WaterItem.coral: (ForagingSource(regions=(SVERegion.fable_reef,)),),
-        Forageable.rainbow_shell: (ForagingSource(regions=(SVERegion.fable_reef,)),),
-        WaterItem.sea_urchin: (ForagingSource(regions=(SVERegion.fable_reef,)),),
-
-        # Crops
-        SVESeed.shrub: (ForagingSource(regions=(Region.secret_woods,), other_requirements=(CombatRequirement(Performance.good),)),),
-        SVEFruit.salal_berry: (Tag(ItemTag.FRUIT), HarvestCropSource(seed=SVESeed.shrub, seasons=(Season.spring,)),),
-        SVESeed.slime: (ForagingSource(regions=(SVERegion.highlands_outside,), other_requirements=(CombatRequirement(Performance.good),)),),
-        SVEFruit.slime_berry: (Tag(ItemTag.FRUIT), HarvestCropSource(seed=SVESeed.slime, seasons=(Season.spring,)),),
-        SVESeed.ancient_fern: (ForagingSource(regions=(Region.secret_woods,)),),
-        SVEVegetable.ancient_fiber: (Tag(ItemTag.VEGETABLE), HarvestCropSource(seed=SVESeed.ancient_fern, seasons=(Season.summer,)),),
-        SVESeed.stalk: (ForagingSource(regions=(SVERegion.highlands_outside,), other_requirements=(CombatRequirement(Performance.good),)),),
-        SVEFruit.monster_fruit: (Tag(ItemTag.FRUIT), HarvestCropSource(seed=SVESeed.stalk, seasons=(Season.summer,)),),
-        SVESeed.fungus: (ForagingSource(regions=(SVERegion.highlands_pond,), other_requirements=(CombatRequirement(Performance.good),)),),
-        SVEVegetable.monster_mushroom: (Tag(ItemTag.VEGETABLE), HarvestCropSource(seed=SVESeed.fungus, seasons=(Season.fall,)),),
-        SVESeed.void: (ForagingSource(regions=(SVERegion.highlands_cavern,), other_requirements=(CombatRequirement(Performance.good),)),),
-        SVEVegetable.void_root: (Tag(ItemTag.VEGETABLE), HarvestCropSource(seed=SVESeed.void, seasons=(Season.winter,)),),
-
-    },
-    fishes=(
-        fish_data.baby_lunaloo,  # Removed when no ginger island
-        fish_data.bonefish,
-        fish_data.bull_trout,
-        fish_data.butterfish,
-        fish_data.clownfish,  # Removed when no ginger island
-        fish_data.daggerfish,
-        fish_data.frog,
-        fish_data.gemfish,
-        fish_data.goldenfish,
-        fish_data.grass_carp,
-        fish_data.king_salmon,
-        fish_data.kittyfish,
-        fish_data.lunaloo,  # Removed when no ginger island
-        fish_data.meteor_carp,
-        fish_data.minnow,
-        fish_data.puppyfish,
-        fish_data.radioactive_bass,
-        fish_data.seahorse,  # Removed when no ginger island
-        fish_data.shiny_lunaloo,  # Removed when no ginger island
-        fish_data.snatcher_worm,
-        fish_data.starfish,  # Removed when no ginger island
-        fish_data.torpedo_trout,
-        fish_data.undeadfish,
-        fish_data.void_eel,
-        fish_data.water_grub,
-        fish_data.sea_sponge,  # Removed when no ginger island
-
-    ),
-    villagers=(
-        villagers_data.claire,
-        villagers_data.lance,  # Removed when no ginger island
-        villagers_data.mommy,
-        villagers_data.sophia,
-        villagers_data.victor,
-        villagers_data.andy,
-        villagers_data.apples,
-        villagers_data.gunther,
-        villagers_data.martin,
-        villagers_data.marlon,
-        villagers_data.morgan,
-        villagers_data.scarlett,
-        villagers_data.susan,
-        villagers_data.morris,
-        override(villagers_data.wizard, bachelor=True, mod_name=ModNames.sve),
-    ),
-    cooking_recipes=(
-        CookingRecipe(name=SVEMeal.baked_berry_oatmeal, ingredients=((Forageable.salmonberry, 15), (Forageable.blackberry, 15), (Ingredient.sugar, 1), (Ingredient.wheat_flour, 2),), sources=(ShopSource(shop_region=SVERegion.bear_shop, price=0),),),
-        CookingRecipe(name=SVEMeal.big_bark_burger, ingredients=((SVEFish.puppyfish, 1), (Meal.bread, 1), (Ingredient.oil, 1),), sources=(ShopSource(shop_region=Region.saloon_shop, price=5500, other_requirements=(SpecificFriendRequirement(npc=NPC.gus, hearts=5),)),),),
-        CookingRecipe(name=SVEMeal.flower_cookie, ingredients=((SVEForage.ferngill_primrose, 1), (SVEForage.goldenrod, 1), (SVEForage.winter_star_rose, 1), (Ingredient.wheat_flour, 1), (Ingredient.sugar, 1), (AnimalProduct.large_egg, 1),), sources=(ShopSource(shop_region=SVERegion.bear_shop, price=0),),),
-        CookingRecipe(name=SVEMeal.frog_legs, ingredients=((SVEFish.frog, 1), (Ingredient.oil, 1), (Ingredient.wheat_flour, 1),), sources=(ShopSource(shop_region=Region.adventurer_guild, price=2000),),),
-        CookingRecipe(name=SVEMeal.glazed_butterfish, ingredients=((SVEFish.butterfish, 1), (Ingredient.wheat_flour, 1), (Ingredient.oil, 1),), sources=(ShopSource(shop_region=Region.saloon_shop, price=4000, other_requirements=(SpecificFriendRequirement(npc=NPC.gus, hearts=10),)),),),
-        CookingRecipe(name=SVEMeal.mixed_berry_pie, ingredients=((Fruit.strawberry, 6), (SVEFruit.salal_berry, 6), (Forageable.blackberry, 6), (SVEForage.bearberry, 6), (Ingredient.sugar, 1), (Ingredient.wheat_flour, 1),), sources=(ShopSource(shop_region=Region.saloon_shop, price=3500),),),
-        CookingRecipe(name=SVEMeal.mushroom_berry_rice, ingredients=((SVEForage.poison_mushroom, 3), (SVEForage.red_baneberry, 10), (Ingredient.rice, 1), (Ingredient.sugar, 2),), sources=(ShopSource(shop_region=Region.adventurer_guild, price=1500, other_requirements=(SpecificFriendRequirement(npc=ModNPC.marlon, hearts=6),)),),),
-        CookingRecipe(name=SVEMeal.seaweed_salad, ingredients=((SVEWaterItem.dulse_seaweed, 2), (WaterItem.seaweed, 2), (Ingredient.oil, 1),), sources=(ShopSource(shop_region=Region.fish_shop, price=1250),),),
-        CookingRecipe(name=SVEMeal.void_delight, ingredients=((SVEFish.void_eel, 1), (Loot.void_essence, 50), (Loot.solar_essence, 20),), sources=(ShopSource(shop_region=Region.sewer_shop, price=5000, other_requirements=(SpecificFriendRequirement(npc=NPC.krobus, hearts=10),)),),),
-        CookingRecipe(name=SVEMeal.void_salmon_sushi, ingredients=((Fish.void_salmon, 1), (ArtisanGood.void_mayonnaise, 1), (WaterItem.seaweed, 3),), sources=(ShopSource(shop_region=Region.sewer_shop, price=5000, other_requirements=(SpecificFriendRequirement(npc=NPC.krobus, hearts=10),)),),),
-    ),
-    crafting_recipes=(
-        CraftingRecipe(name=ModEdible.haste_elixir, ingredients=((Loot.void_essence, 35), (ModLoot.void_soul, 5), (Ingredient.sugar, 1), (Meal.spicy_eel, 1),), sources=(ShopSource(shop_region=SVERegion.alesia_shop, price=35000),),),
-        CraftingRecipe(name=ModEdible.hero_elixir, ingredients=((ModLoot.void_pebble, 3), (ModLoot.void_soul, 5), (Ingredient.oil, 1), (Loot.slime, 10),), sources=(ShopSource(shop_region=SVERegion.isaac_shop, price=65000),),),
-        CraftingRecipe(name=ModEdible.armor_elixir, ingredients=((Loot.solar_essence, 30), (ModLoot.void_soul, 5), (Ingredient.vinegar, 5), (Fossil.bone_fragment, 5),), sources=(ShopSource(shop_region=SVERegion.alesia_shop, price=50000),),),
-    ),
-))
+    )
+)

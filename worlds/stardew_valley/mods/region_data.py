@@ -359,6 +359,8 @@ sve_main_land_regions = [
     RegionData(SVERegion.isaac_shop),
     RegionData(SVERegion.summit, (SVEEntrance.leave_summit,)),
     RegionData(SVERegion.susans_house, (SVEEntrance.from_susan_house,)),
+    RegionData(Region.witch_swamp, (SVEEntrance.witch_swamp_to_forbidden_maze,)),
+    RegionData(SVERegion.forbidden_maze),
 ]
 
 sve_ginger_island_regions = [
@@ -370,13 +372,20 @@ sve_ginger_island_regions = [
     RegionData(SVERegion.guild_summit, (SVEEntrance.summit_to_highlands,)),
     RegionData(
         SVERegion.highlands_outside,
-        (SVEEntrance.highlands_to_lance, SVEEntrance.highlands_to_cave, SVEEntrance.highlands_to_pond),
+        (
+            SVEEntrance.highlands_to_lance,
+            SVEEntrance.highlands_to_cave,
+            SVEEntrance.highlands_to_pond,
+            SVEEntrance.highlands_to_diamond_cavern,
+        ),
     ),
     RegionData(SVERegion.highlands_pond),
+    RegionData(SVERegion.diamond_cavern),
     RegionData(SVERegion.highlands_cavern, (SVEEntrance.to_dwarf_prison,)),
     RegionData(SVERegion.dwarf_prison),
     RegionData(SVERegion.lances_house, (SVEEntrance.lance_to_ladder, SVEEntrance.lance_to_highlands)),
-    RegionData(SVERegion.lances_ladder, (SVEEntrance.lance_ladder_to_highlands,))]
+    RegionData(SVERegion.lances_ladder, (SVEEntrance.lance_ladder_to_highlands,)),
+]
 
 sve_main_land_connections = [
     ConnectionData(SVEEntrance.town_to_jenkins, SVERegion.jenkins_residence),
@@ -514,11 +523,13 @@ sve_main_land_connections = [
     ConnectionData(SVEEntrance.fish_cabin_to_willy_bedroom, SVERegion.willy_bedroom),
     ConnectionData(SVEEntrance.museum_to_gunther_bedroom, SVERegion.gunther_bedroom),
     ConnectionData(SVEEntrance.highlands_to_pond, SVERegion.highlands_pond),
+    ConnectionData(SVEEntrance.witch_swamp_to_forbidden_maze, SVERegion.forbidden_maze),
 ]
 
 sve_ginger_island_connections = [
     ConnectionData(SVEEntrance.wizard_to_fable_reef, SVERegion.fable_reef),
     ConnectionData(SVEEntrance.fable_reef_to_guild, SVERegion.first_slash_guild),
+    ConnectionData(SVEEntrance.highlands_to_diamond_cavern, SVERegion.diamond_cavern),
     ConnectionData(
         SVEEntrance.highlands_to_lance,
         SVERegion.lances_house,
