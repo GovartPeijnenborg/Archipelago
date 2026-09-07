@@ -271,7 +271,7 @@ register_mod_content_pack(
             fish_data.frog,
             fish_data.gar,
             fish_data.gemfish,
-            fish_data.goldenfish,
+            fish_data.glowfish,
             fish_data.goldfish,
             fish_data.grass_carp,
             fish_data.highlands_bass,  # Removed when no ginger island

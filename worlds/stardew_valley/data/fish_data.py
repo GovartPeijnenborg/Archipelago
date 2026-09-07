@@ -176,7 +176,7 @@ fiber_goby = create_fish(SVEFish.fiber_goby, highlands_pond, season.all_seasons,
 frog = create_fish(SVEFish.frog, mountain_lake, (season.spring, season.summer), 70, mod_name=ModNames.sve)
 gar = create_fish(SVEFish.gar, forest_river, (season.summer, season.fall), 55, mod_name=ModNames.sve)
 gemfish = create_fish(SVEFish.gemfish, highlands_cave, season.all_seasons, 100, mod_name=ModNames.sve)
-goldenfish = create_fish(SVEFish.goldenfish, sprite_spring, season.all_seasons, 60, mod_name=ModNames.sve)
+glowfish = create_fish(SVEFish.glowfish, sprite_spring, season.all_seasons, 60, mod_name=ModNames.sve)
 goldfish = create_fish(SVEFish.goldfish, town_river, season.spring, 25, mod_name=ModNames.sve)
 grass_carp = create_fish(SVEFish.grass_carp, secret_woods, (season.spring, season.summer), 85, mod_name=ModNames.sve)
 highlands_bass = create_fish(SVEFish.highlands_bass, highlands, season.all_seasons, 45, mod_name=ModNames.sve)

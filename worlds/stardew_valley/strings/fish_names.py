@@ -125,7 +125,7 @@ class SVEFish:
     frog = "Frog"
     gar = "Gar"
     gemfish = "Gemfish"
-    goldenfish = "Goldenfish"
+    glowfish = "Glowfish"
     goldfish = "Goldfish"
     grass_carp = "Grass Carp"
     highlands_bass = "Highlands Bass"

@@ -57,7 +57,7 @@ sve_pelican_town_medium_fishes = {
     SVEFish.bonefish,
     SVEFish.butterfish,
     SVEFish.frog,
-    SVEFish.goldenfish,
+    SVEFish.glowfish,
     SVEFish.snatcher_worm,
     SVEFish.water_grub,
     SVEFish.gar,
