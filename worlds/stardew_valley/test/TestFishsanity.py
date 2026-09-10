@@ -50,18 +50,18 @@ sve_pelican_town_hard_fishes = {
     SVEFish.radioactive_bass,
     SVEFish.undeadfish,
     SVEFish.void_eel,
-    SVEFish.alligator,
     SVEFish.wolf_snapper,
+    SVEFish.butterfish,
+    SVEFish.gar,
 }
 sve_pelican_town_medium_fishes = {
     SVEFish.bonefish,
-    SVEFish.butterfish,
     SVEFish.frog,
     SVEFish.glowfish,
     SVEFish.snatcher_worm,
     SVEFish.water_grub,
-    SVEFish.gar,
     SVEFish.starfish,
+    SVEFish.alligator,
 }
 sve_pelican_town_easy_fishes = {
     SVEFish.bull_trout,
