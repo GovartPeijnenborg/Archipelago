@@ -42,16 +42,59 @@ ginger_island_medium_fishes = {Fish.blue_discus, Fish.lionfish, Fish.tilapia, Fi
 qi_board_legendary_fishes = {Fish.ms_angler, Fish.son_of_crimsonfish, Fish.glacierfish_jr, Fish.legend_ii, Fish.radioactive_carp, }
 
 sve_pelican_town_hard_fishes = {
-    SVEFish.grass_carp, SVEFish.king_salmon, SVEFish.kittyfish, SVEFish.meteor_carp, SVEFish.puppyfish, SVEFish.radioactive_bass, SVEFish.undeadfish,
+    SVEFish.grass_carp,
+    SVEFish.king_salmon,
+    SVEFish.kittyfish,
+    SVEFish.meteor_carp,
+    SVEFish.puppyfish,
+    SVEFish.radioactive_bass,
+    SVEFish.undeadfish,
     SVEFish.void_eel,
+    SVEFish.wolf_snapper,
+    SVEFish.butterfish,
+    SVEFish.gar,
 }
 sve_pelican_town_medium_fishes = {
-    SVEFish.bonefish, SVEFish.butterfish, SVEFish.frog, SVEFish.goldenfish, SVEFish.snatcher_worm, SVEFish.water_grub,
+    SVEFish.bonefish,
+    SVEFish.frog,
+    SVEFish.glowfish,
+    SVEFish.snatcher_worm,
+    SVEFish.water_grub,
+    SVEFish.starfish,
+    SVEFish.alligator,
 }
-sve_pelican_town_easy_fishes = {SVEFish.bull_trout, SVEFish.minnow, }
-sve_ginger_island_hard_fishes = {SVEFish.gemfish, SVEFish.shiny_lunaloo, }
-sve_ginger_island_medium_fishes = {SVEFish.daggerfish, SVEFish.lunaloo, SVEFish.starfish, SVEFish.torpedo_trout, }
-sve_ginger_island_easy_fishes = {SVEFish.baby_lunaloo, SVEFish.clownfish, SVEFish.seahorse, SVEFish.sea_sponge, }
+sve_pelican_town_easy_fishes = {
+    SVEFish.bull_trout,
+    SVEFish.minnow,
+    SVEFish.swamp_crab,
+    SVEFish.tadpole,
+    SVEFish.goldfish,
+}
+sve_ginger_island_hard_fishes = {
+    SVEFish.gemfish,
+    SVEFish.shiny_lunaloo,
+    SVEFish.arrowhead_shark,
+    SVEFish.ocean_sunfish,
+    SVEFish.shark,
+    SVEFish.turretfish,
+    SVEFish.viper_eel,
+}
+sve_ginger_island_medium_fishes = {
+    SVEFish.daggerfish,
+    SVEFish.lunaloo,
+    SVEFish.torpedo_trout,
+    SVEFish.barred_knifejaw,
+    SVEFish.diamond_carp,
+    SVEFish.fiber_goby,
+}
+sve_ginger_island_easy_fishes = {
+    SVEFish.baby_lunaloo,
+    SVEFish.clownfish,
+    SVEFish.seahorse,
+    SVEFish.sea_sponge,
+    SVEFish.blue_tang,
+    SVEFish.highlands_bass,
+}
 
 distant_lands_hard_fishes = {DistantLandsFish.giant_horsehoe_crab, }
 distant_lands_easy_fishes = {DistantLandsFish.void_minnow, DistantLandsFish.purple_algae, DistantLandsFish.swamp_leech, }

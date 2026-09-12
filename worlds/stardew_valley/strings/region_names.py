@@ -377,7 +377,11 @@ class SVERegion:
     willy_bedroom = "Willy's Bedroom"
     gunther_bedroom = "Gunther's Bedroom"
     highlands_pond = "Highlands Pond"
-
+    diamond_cavern = "Diamond Cavern"
+    forbidden_maze = "Forbidden Maze"
+    henchman_backyard = "Henchman Backyard"
+    morris_property = "Morris Property"  # Note: Only for JojaPocalypse?
+    morris_house = "Morris House"
 
 class AlectoRegion:
     witch_attic = "Witch's Attic"

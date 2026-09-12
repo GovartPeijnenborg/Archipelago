@@ -18,8 +18,8 @@ sve_villagers = 13
 sve_villagers_with_lance = 14
 vanilla_pelican_town_fish = 63
 vanilla_ginger_island_fish = 3
-sve_pelican_town_fish = 16
-sve_ginger_island_fish = 10
+sve_pelican_town_fish = 23
+sve_ginger_island_fish = 19
 
 
 class TestVanilla(SVContentPackTestBase):
@@ -63,7 +63,7 @@ class TestSVE(SVContentPackTestBase):
         self.assertIn(SVEFish.bull_trout, fish_names)
         self.assertIn(SVEFish.butterfish, fish_names)
         self.assertIn(SVEFish.frog, fish_names)
-        self.assertIn(SVEFish.goldenfish, fish_names)
+        self.assertIn(SVEFish.glowfish, fish_names)
         self.assertIn(SVEFish.grass_carp, fish_names)
         self.assertIn(SVEFish.king_salmon, fish_names)
         self.assertIn(SVEFish.kittyfish, fish_names)
@@ -114,7 +114,7 @@ class TestSVEWithGingerIsland(SVContentPackTestBase):
         self.assertIn(SVEFish.daggerfish, fish_names)
         self.assertIn(SVEFish.frog, fish_names)
         self.assertIn(SVEFish.gemfish, fish_names)
-        self.assertIn(SVEFish.goldenfish, fish_names)
+        self.assertIn(SVEFish.glowfish, fish_names)
         self.assertIn(SVEFish.grass_carp, fish_names)
         self.assertIn(SVEFish.king_salmon, fish_names)
         self.assertIn(SVEFish.kittyfish, fish_names)

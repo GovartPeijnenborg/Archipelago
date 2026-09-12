@@ -654,6 +654,8 @@ class SVEEntrance:
     fish_cabin_to_willy_bedroom = "Willy's Fish Cabin to Willy's Bedroom"
     museum_to_gunther_bedroom = "Museum to Gunther's Bedroom"
     highlands_to_pond = "Highlands to Highlands Pond"
+    witch_swamp_to_forbidden_maze = "Witch's Swamp to Forbidden Maze"
+    highlands_to_diamond_cavern = "Highlands to Diamond Cavern"
 
 
 @final

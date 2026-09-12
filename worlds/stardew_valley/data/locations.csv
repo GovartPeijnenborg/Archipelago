@@ -3889,36 +3889,52 @@ id,region,name,tags,content_packs
 57651,Alesia Shop,Tempered Galaxy Dagger,MANDATORY,Stardew Valley Expanded
 57652,Isaac Shop,Tempered Galaxy Sword,MANDATORY,Stardew Valley Expanded
 57653,Isaac Shop,Tempered Galaxy Hammer,MANDATORY,Stardew Valley Expanded
-57701,Island South,Fishsanity: Baby Lunaloo,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57702,Crimson Badlands,Fishsanity: Bonefish,FISHSANITY,Stardew Valley Expanded
-57703,Forest,Fishsanity: Bull Trout,FISHSANITY,Stardew Valley Expanded
-57704,Forest West,Fishsanity: Butterfish,FISHSANITY,Stardew Valley Expanded
-57705,Island South,Fishsanity: Clownfish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57706,Highlands Outside,Fishsanity: Daggerfish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57707,Mountain,Fishsanity: Frog,FISHSANITY,Stardew Valley Expanded
-57708,Highlands Outside,Fishsanity: Gemfish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57709,Sprite Spring,Fishsanity: Goldenfish,FISHSANITY,Stardew Valley Expanded
-57710,Secret Woods,Fishsanity: Grass Carp,FISHSANITY,Stardew Valley Expanded
-57711,Forest West,Fishsanity: King Salmon,FISHSANITY,Stardew Valley Expanded
-57712,Island West,Fishsanity: Lunaloo,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57713,Sprite Spring,Fishsanity: Meteor Carp,FISHSANITY,Stardew Valley Expanded
-57714,Town,Fishsanity: Minnow,FISHSANITY,Stardew Valley Expanded
-57715,Forest West,Fishsanity: Puppyfish,FISHSANITY,Stardew Valley Expanded
-57716,Sewer,Fishsanity: Radioactive Bass,FISHSANITY,Stardew Valley Expanded
-57717,Island West,Fishsanity: Seahorse,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57718,Island West,Fishsanity: Sea Sponge,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57719,Island South,Fishsanity: Shiny Lunaloo,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57720,Mutant Bug Lair,Fishsanity: Snatcher Worm,FISHSANITY,Stardew Valley Expanded
-57721,Beach,Fishsanity: Starfish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57722,Fable Reef,Fishsanity: Torpedo Trout,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
-57723,Witch's Swamp,Fishsanity: Void Eel,FISHSANITY,Stardew Valley Expanded
-57724,Mutant Bug Lair,Fishsanity: Water Grub,FISHSANITY,Stardew Valley Expanded
-57725,Crimson Badlands,Fishsanity: Undeadfish,FISHSANITY,Stardew Valley Expanded
-57726,Shearwater Bridge,Fishsanity: Kittyfish,FISHSANITY,Stardew Valley Expanded
+57701,Fishing,Fishsanity: Baby Lunaloo,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57702,Fishing,Fishsanity: Bonefish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded,""
+57703,Fishing,Fishsanity: Bull Trout,FISHSANITY,Stardew Valley Expanded
+57704,Fishing,Fishsanity: Butterfish,FISHSANITY,Stardew Valley Expanded
+57705,Fishing,Fishsanity: Clownfish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57706,Fishing,Fishsanity: Daggerfish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57707,Fishing,Fishsanity: Frog,FISHSANITY,Stardew Valley Expanded
+57708,Fishing,Fishsanity: Gemfish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57709,Fishing,Fishsanity: Glowfish,FISHSANITY,Stardew Valley Expanded
+57710,Fishing,Fishsanity: Grass Carp,FISHSANITY,Stardew Valley Expanded
+57711,Fishing,Fishsanity: King Salmon,FISHSANITY,Stardew Valley Expanded
+57712,Fishing,Fishsanity: Lunaloo,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57713,Fishing,Fishsanity: Meteor Carp,FISHSANITY,Stardew Valley Expanded
+57714,Fishing,Fishsanity: Minnow,FISHSANITY,Stardew Valley Expanded
+57715,Fishing,Fishsanity: Puppyfish,FISHSANITY,Stardew Valley Expanded
+57716,Fishing,Fishsanity: Radioactive Bass,FISHSANITY,Stardew Valley Expanded
+57717,Fishing,Fishsanity: Seahorse,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57718,Fishing,Fishsanity: Sea Sponge,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57719,Fishing,Fishsanity: Shiny Lunaloo,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57720,Fishing,Fishsanity: Snatcher Worm,FISHSANITY,Stardew Valley Expanded
+57721,Fishing,Fishsanity: Starfish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57722,Fishing,Fishsanity: Torpedo Trout,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded
+57723,Fishing,Fishsanity: Void Eel,FISHSANITY,Stardew Valley Expanded
+57724,Fishing,Fishsanity: Water Grub,FISHSANITY,Stardew Valley Expanded
+57725,Fishing,Fishsanity: Undeadfish,"FISHSANITY,GINGER_ISLAND",Stardew Valley Expanded,""
+57726,Fishing,Fishsanity: Kittyfish,FISHSANITY,Stardew Valley Expanded
 57728,Witch's Swamp,Fishsanity: Void Minnow,FISHSANITY,Distant Lands - Witch Swamp Overhaul
 57729,Witch's Swamp,Fishsanity: Swamp Leech,FISHSANITY,Distant Lands - Witch Swamp Overhaul
 57730,Witch's Swamp,Fishsanity: Giant Horsehoe Crab,FISHSANITY,Distant Lands - Witch Swamp Overhaul
 57731,Witch's Swamp,Fishsanity: Purple Algae,FISHSANITY,Distant Lands - Witch Swamp Overhaul
+57732,Fishing,Fishsanity: Alligator,FISHSANITY,Stardew Valley Expanded
+57733,Fishing,Fishsanity: Arrowhead Shark,FISHSANITY,Stardew Valley Expanded
+57734,Fishing,Fishsanity: Barred Knifejaw,FISHSANITY,Stardew Valley Expanded
+57735,Fishing,Fishsanity: Blue Tang,FISHSANITY,Stardew Valley Expanded
+57736,Fishing,Fishsanity: Diamond Carp,FISHSANITY,Stardew Valley Expanded
+57738,Fishing,Fishsanity: Fiber Goby,FISHSANITY,Stardew Valley Expanded
+57739,Fishing,Fishsanity: Gar,FISHSANITY,Stardew Valley Expanded
+57740,Fishing,Fishsanity: Goldfish,FISHSANITY,Stardew Valley Expanded
+57741,Fishing,Fishsanity: Highlands Bass,FISHSANITY,Stardew Valley Expanded
+57742,Fishing,Fishsanity: Ocean Sunfish,FISHSANITY,Stardew Valley Expanded
+57743,Fishing,Fishsanity: Shark,FISHSANITY,Stardew Valley Expanded
+57744,Fishing,Fishsanity: Swamp Crab,FISHSANITY,Stardew Valley Expanded
+57745,Fishing,Fishsanity: Tadpole,FISHSANITY,Stardew Valley Expanded
+57746,Fishing,Fishsanity: Turretfish,FISHSANITY,Stardew Valley Expanded
+57747,Fishing,Fishsanity: Viper Eel,FISHSANITY,Stardew Valley Expanded
+57748,Fishing,Fishsanity: Wolf Snapper,FISHSANITY,Stardew Valley Expanded
 57901,Farm,Harvest Monster Fruit,"CROPSANITY,GINGER_ISLAND",Stardew Valley Expanded
 57902,Farm,Harvest Salal Berry,CROPSANITY,Stardew Valley Expanded
 57903,Farm,Harvest Slime Berry,"CROPSANITY,GINGER_ISLAND",Stardew Valley Expanded
@@ -3956,7 +3972,7 @@ id,region,name,tags,content_packs
 58029,Shipping,Shipsanity: Gemfish,"SHIPSANITY,SHIPSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
 58030,Shipping,Shipsanity: Glazed Butterfish,"SHIPSANITY",Stardew Valley Expanded
 58031,Shipping,Shipsanity: Golden Ocean Flower,"SHIPSANITY,SHIPSANITY_FULL_SHIPMENT,GINGER_ISLAND",Stardew Valley Expanded
-58032,Shipping,Shipsanity: Goldenfish,"SHIPSANITY,SHIPSANITY_FISH",Stardew Valley Expanded
+58032,Shipping,Shipsanity: Glowfish,"SHIPSANITY,SHIPSANITY_FISH",Stardew Valley Expanded
 58033,Shipping,Shipsanity: Goldenrod,"SHIPSANITY,SHIPSANITY_FULL_SHIPMENT",Stardew Valley Expanded
 58034,Shipping,Shipsanity: Grampleton Orange Chicken,SHIPSANITY,Stardew Valley Expanded
 58035,Shipping,Shipsanity: Grass Carp,"SHIPSANITY,SHIPSANITY_FISH",Stardew Valley Expanded
@@ -4163,4 +4179,64 @@ id,region,name,tags,content_packs
 58246,Shipping,Shipsanity: Fish Casserole,SHIPSANITY,Binning Skill
 58247,Shipping,Shipsanity: Snatcher Worm,SHIPSANITY,Stardew Valley Expanded
 58248,Shipping,Shipsanity: Digging Like Worms,SHIPSANITY,Archaeology
+58249,Shipping,Shipsanity: Alligator,SHIPSANITY,Stardew Valley Expanded
+58250,Shipping,Shipsanity: Arrowhead Shark,SHIPSANITY,Stardew Valley Expanded
+58251,Shipping,Shipsanity: Barred Knifejaw,SHIPSANITY,Stardew Valley Expanded
+58252,Shipping,Shipsanity: Blue Tang,SHIPSANITY,Stardew Valley Expanded
+58253,Shipping,Shipsanity: Diamond Carp,SHIPSANITY,Stardew Valley Expanded
+58254,Shipping,Shipsanity: Dulse Seaweed,SHIPSANITY,Stardew Valley Expanded
+58255,Shipping,Shipsanity: Fiber Goby,SHIPSANITY,Stardew Valley Expanded
+58256,Shipping,Shipsanity: Gar,SHIPSANITY,Stardew Valley Expanded
+58257,Shipping,Shipsanity: Goldfish,SHIPSANITY,Stardew Valley Expanded
+58258,Shipping,Shipsanity: Highlands Bass,SHIPSANITY,Stardew Valley Expanded
+58259,Shipping,Shipsanity: Ocean Sunfish,SHIPSANITY,Stardew Valley Expanded
+58260,Shipping,Shipsanity: Shark,SHIPSANITY,Stardew Valley Expanded
+58261,Shipping,Shipsanity: Swamp Crab,SHIPSANITY,Stardew Valley Expanded
+58262,Shipping,Shipsanity: Tadpole,SHIPSANITY,Stardew Valley Expanded
+58263,Shipping,Shipsanity: Turretfish,SHIPSANITY,Stardew Valley Expanded
+58264,Shipping,Shipsanity: Viper Eel,SHIPSANITY,Stardew Valley Expanded
+58265,Shipping,Shipsanity: Wolf Snapper,SHIPSANITY,Stardew Valley Expanded
+58266,Eating,Eat Alligator,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58267,Eating,Eat Arrowhead Shark,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
+58268,Eating,Eat Baby Lunaloo,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58269,Eating,Eat Barred Knifejaw,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
+58270,Eating,Eat Blue Tang,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
+58271,Eating,Eat Bonefish,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58272,Eating,Eat Bull Trout,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58273,Eating,Eat Butterfish,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58274,Eating,Eat Clownfish,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
+58275,Eating,Eat Daggerfish,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58276,Eating,Eat Diamond Carp,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58277,Eating,Eat Dulse Seaweed,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58278,Eating,Eat Fiber Goby,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
+58279,Eating,Eat Frog,"EATSANITY,EATSANITY_FISH,EATSANITY_POISONOUS",Stardew Valley Expanded
+58280,Eating,Eat Gar,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58281,Eating,Eat Gemfish,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58282,Eating,Eat Glowfish,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58283,Eating,Eat Goldfish,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58284,Eating,Eat Grass Carp,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58285,Eating,Eat Highlands Bass,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
+58286,Eating,Eat King Salmon,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58287,Eating,Eat Kittyfish,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58288,Eating,Eat Lunaloo,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58289,Eating,Eat Meteor Carp,"EATSANITY,EATSANITY_FISH,EATSANITY_POISONOUS",Stardew Valley Expanded
+58290,Eating,Eat Minnow,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58291,Eating,Eat Ocean Sunfish,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
+58292,Eating,Eat Puppyfish,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58293,Eating,Eat Radioactive Bass,"EATSANITY,EATSANITY_FISH,EATSANITY_POISONOUS",Stardew Valley Expanded
+58294,Eating,Eat Sea Sponge,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58295,Eating,Eat Seahorse,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
+58296,Eating,Eat Shark,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND",Stardew Valley Expanded
+58297,Eating,Eat Shiny Lunaloo,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58298,Eating,Eat Snatcher Worm,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58299,Eating,Eat Starfish,"EATSANITY,EATSANITY_FISH,EATSANITY_POISONOUS",Stardew Valley Expanded
+58300,Eating,Eat Swamp Crab,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58301,Eating,Eat Tadpole,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58302,Eating,Eat Torpedo Trout,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58303,Eating,Eat Turretfish,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58304,Eating,Eat Undeadfish,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58305,Eating,Eat Viper Eel,"EATSANITY,EATSANITY_FISH,GINGER_ISLAND,EATSANITY_POISONOUS",Stardew Valley Expanded
+58306,Eating,Eat Void Eel,"EATSANITY,EATSANITY_FISH,EATSANITY_POISONOUS",Stardew Valley Expanded
+58307,Eating,Eat Water Grub,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
+58308,Eating,Eat Wolf Snapper,"EATSANITY,EATSANITY_FISH",Stardew Valley Expanded
 59000,Farm,Read Digging Like Worms,"BOOKSANITY,BOOKSANITY_SKILL",Archaeology

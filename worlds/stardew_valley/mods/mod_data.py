@@ -45,7 +45,6 @@ class ModNames(StrEnum):
             ModNames.delores,
             ModNames.riley,
             ModNames.boarding_house,
-            ModNames.sve,
             ModNames.ginger_island,  # Not a mod per se, so we can't really consider it enabled...
         }
 
